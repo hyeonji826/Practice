@@ -1,9 +1,10 @@
 {
   "name": "myapp",
   "version": "1.0.0",
+  "main":"login.mjs",
   "scripts": {
-    "start": "node login.mjs",
-    "dev": "nodemon login.mjs"
+    "start": "node 20250422/login.mjs",
+    "dev": "nodemon 20250422/login.mjs"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
