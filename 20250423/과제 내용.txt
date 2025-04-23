@@ -1,0 +1,35 @@
+과제 안내
+
+회원 API 구현 (가입 / 로그인 / 수정 / 탈퇴) + Swagger 문서 작성 + GitHub 제출
+Express.js를 사용하여 아래의 회원 기능 API (총 4개)를 라우터로 구현하고, Swagger 주석으로 문서화한 뒤, GitHub에 업로드하여 제출하세요.
+routes/auth.js 파일을 생성하고 아래 API를 모두 구현하세요
+[POST] /signup – 회원가입
+사용자가 회원 정보를 입력하여 가입 처리
+{
+  "userid": "아이디",
+  "password": "비밀번호",
+  "email": "이메일",
+  "name": "이름",
+  "phone": "전화번호"
+}
+ [POST] /login – 로그인
+아이디와 비밀번호로 로그인 요청 처리
+{
+  "userid": "아이디",
+  "password": "비밀번호"
+}
+[PUT] /user – 회원정보 수정
+이메일, 이름, 전화번호 등을 수정
+{
+  "userid": "아이디",
+  "email": "새 이메일",
+  "name": "새 이름",
+  "phone": "새 전화번호"
+}
+[DELETE] /user – 회원탈퇴
+회원 탈퇴 처리 (단순히 아이디로 탈퇴 처리)
+{
+  "userid": "아이디"
+}
+모든 API 위에 Swagger 주석(@swagger)을 작성하고, 다음 항목을 포함하세요:
+항목설명summaryAPI 기능 요약requestBody요청 형식과 필드 설명responses각 응답 코드와 메시지 설명
