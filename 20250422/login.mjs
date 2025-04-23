@@ -4,7 +4,7 @@ import fs from "fs";
 const app = express();
 
 app.get("/", (req, res) => {
-  fs.readFile("20250422/login.html", (err, data) => {
+  fs.readFile("login.html", (err, data) => {
     if (err) {
       res.status(500);
       return res.send("파일 읽기 오류");
@@ -15,10 +15,8 @@ app.get("/", (req, res) => {
 });
 
 app.get("/login", (req, res) => {
-  console.log("login 창입니다.");
-  console.log(req.query);
-  console.log("아이디:", req.query.userid);
-  console.log("비밀번호:", req.query.userpw);
+  const { userid, userpw } = req.query;
+  res.send(`입력한 아이디 : ${userid} <br/> 입력한 비밀번호 : ${userpw}`);
 });
 
 app.listen(3001, () => {

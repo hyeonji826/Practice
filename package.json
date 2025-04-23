@@ -2,8 +2,8 @@
   "name": "myapp",
   "version": "1.0.0",
   "scripts": {
-    "start": "node swagger.js",
-    "dev": "nodemon swagger.js"
+    "start": "node login.mjs",
+    "dev": "nodemon login.mjs"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
